@@ -1,7 +1,9 @@
 
 public class Manipula_Cadenas_III {
-
+	
 	public static void main(String[] args) {
+		// Video Nro 12
+		
 		// Uso del Método equals de la clase String para verificar si 2 cadenas de caracteres son iguales
 		
 		String alumno1, alumno2;
