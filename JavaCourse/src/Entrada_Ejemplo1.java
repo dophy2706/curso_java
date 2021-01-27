@@ -1,8 +1,10 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Entrada_Ejemplo1 {
 
 	public static void main(String[] args) {
+		// Video Nro. 14
+		
 		// Leer datos digitados por usuario 
 
 		Scanner entrada = new Scanner(System.in);
