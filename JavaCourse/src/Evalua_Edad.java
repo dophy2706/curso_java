@@ -33,6 +33,7 @@ public class Evalua_Edad {
 		}
 
 		System.out.println(msj);
+		entrada.close();
 	}
 
 }

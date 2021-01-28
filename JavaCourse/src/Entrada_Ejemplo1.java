@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Entrada_Ejemplo1 {
 
@@ -19,7 +19,7 @@ public class Entrada_Ejemplo1 {
 		
 		System.out.println("Hola " + nombreUsuario + ", el año que viene tendrás " + (edad + 1) + " años.");
 		
-		
+		entrada.close();
 	}
 
 }

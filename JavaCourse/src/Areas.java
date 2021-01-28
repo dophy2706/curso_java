@@ -62,7 +62,7 @@ public class Areas {
 		}
 		
 		System.out.printf(msj + "%1.2f", area);
-		
+		entrada.close();
 	}
 
 }
