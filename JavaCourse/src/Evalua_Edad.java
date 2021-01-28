@@ -5,6 +5,8 @@ public class Evalua_Edad {
 
 	public static void main(String[] args) {
 		
+		// Video Nro. 16 - Estructuras de control de flujo IF ELSE
+		
 		Scanner entrada = new Scanner(System.in);
 		
 		System.out.println("Introduce una Edad");
@@ -13,15 +15,21 @@ public class Evalua_Edad {
 		
 		String msj;
 		
-		if (edad > 0 && edad < 18) {
+		if (edad < 18) {
 			
-			msj = "Es menor de edad";
+			msj = "Eres Adolescente";
 			
-		} else if (edad >= 18) {
+		} else if (edad < 40) {
 			
-			msj = "Es Mayor";
+			msj = "Eres Joven";
+			
+		} else if (edad < 65) {
+			
+			msj = "Eres Maduro";
+			
 		} else {
-			msj = "Número Inválido";
+			
+			msj = "Anciano";
 		}
 
 		System.out.println(msj);

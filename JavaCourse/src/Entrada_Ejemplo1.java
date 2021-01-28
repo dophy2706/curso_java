@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Entrada_Ejemplo1 {
 
