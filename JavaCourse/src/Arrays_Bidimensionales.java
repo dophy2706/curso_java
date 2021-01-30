@@ -3,7 +3,7 @@ public class Arrays_Bidimensionales {
 
 	public static void main(String[] args) {
 		
-		final int MI = 4, MJ = 5;
+		//final int MI = 4, MJ = 5;
 		
 		int [][] matrix = {
 				{10, 15, 18, 19, 21},
