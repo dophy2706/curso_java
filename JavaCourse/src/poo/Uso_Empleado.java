@@ -72,6 +72,10 @@ class Empleado {
 	 	this.alta_contrato = calendario.getTime();
 		 
  	}
+	
+	public Empleado(String nom) {
+		nombre = nom;
+	}
 	 
 	public String getNombre() {
 	 

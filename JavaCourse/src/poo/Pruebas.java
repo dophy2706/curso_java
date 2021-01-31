@@ -1,5 +1,6 @@
 package poo;
 
+
 public class Pruebas {
 
 	public static void main(String[] args) {
@@ -13,12 +14,13 @@ public class Pruebas {
 	
 		trabajador1.cambiarSeccion("RRHH");
 		
-		System.out.println(trabajador1.retornaDatos());
-		System.out.println(trabajador2.retornaDatos());
-		System.out.println(trabajador3.retornaDatos());
-		System.out.println(trabajador4.retornaDatos());
-		System.out.println(trabajador5.retornaDatos());
-
+		System.out.println(trabajador1.retornaDatos() + "\n" +
+							trabajador2.retornaDatos() + "\n" +
+							trabajador3.retornaDatos() + "\n" + 
+							trabajador4.retornaDatos() + "\n" + 
+							trabajador5.retornaDatos());
+		
+		System.out.println(Empleados.getIdProximo());
 		
 	}
 
@@ -56,6 +58,11 @@ class Empleados {
 	public String retornaDatos() {
 		
 		return "En nombre es: " + this.nombre + " y la sección es: " + this.seccion + " y el Id = " + Id;
+	}
+	
+	public static String getIdProximo() {
+		
+		return "El próximo Id es " + Id_Proximo;
 	}
 	
 }
