@@ -80,7 +80,37 @@ public class Coche {
 		
 		return "La plataforma del vehículo tiene " + ruedas + " ruedas. " + 
 		"Mide " + largo / 1000 + " metros con un ancho de " + ancho + 
-		" cm y un peso de plataforma de " + peso_plataforma + " Kg.";
+		" cm y un peso de plataforma de " + peso_plataforma + " Kg. con un motor de " + this.motor + " Cm3.";
 	}
 	
+	public String retornaPesoCoche() {
+		
+		int peso_carroceria = 500;
+		
+		this.peso_total = this.peso_plataforma + peso_carroceria;
+		
+		if (asientos_cuero == true) {
+			this.peso_total += 50;
+		}
+		
+		if (climatizador == true) {
+			this.peso_total += 20;
+		}
+		
+		return "El peso del coche es " + peso_total + "Kg";
+	}
+	
+	public int  retornaPrecioCoche() {
+		int precio_final = 10000;
+		
+		if (asientos_cuero) {
+			precio_final += 2000;
+		}
+		
+		if (climatizador) {
+			precio_final += 1500;
+		}
+		
+		return precio_final;
+	}
 }
