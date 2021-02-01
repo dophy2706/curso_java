@@ -24,11 +24,13 @@ public class Uso_Empleado {
 		System.out.println("Nombre:  " + empleado3.getNombre() + " - Sueldo: " + empleado3.getSueldo() + " - Fecha de Alta: " + empleado3.getFechaAltaContrato());
 		*/
 		
-		Empleado[] misEmpleados = new Empleado[3];
+		Empleado[] misEmpleados = new Empleado[5];
 		
 		misEmpleados[0] = new Empleado("Rodolfo", 43500.55, 2007, 01, 14);
 		misEmpleados[1] = new Empleado("Pedro Mansilla", 35000, 1998, 12, 13);
 		misEmpleados[2] = new Empleado("María José", 72500.5, 2002, 03, 8);
+		misEmpleados[3] = new Empleado("Antonio Maciegas", 30000, 1987, 06, 27);
+		misEmpleados[4] = new Empleado("Priscila Dávila");
 		
 		/*
 		for (int i = 0; i < misEmpleados.length; i++) {
@@ -37,7 +39,7 @@ public class Uso_Empleado {
 		
 		for (Empleado empleado : misEmpleados) {
 			  
-			empleado.subeSueldo(5.98);
+			empleado.subeSueldo(5.00);
 		}
 		
 		
@@ -74,8 +76,12 @@ class Empleado {
  	}
 	
 	public Empleado(String nom) {
-		nombre = nom;
+		
+		this(nom, 30000, 1993, 10, 8); // implementación del this() pra encontrar un constructor que tenga 5 args y cargar datos
+		
 	}
+	
+	
 	 
 	public String getNombre() {
 	 

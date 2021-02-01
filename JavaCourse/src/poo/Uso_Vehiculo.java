@@ -2,7 +2,7 @@ package poo;
 
 import javax.swing.JOptionPane;
 
-public class Uso_Coche {
+public class Uso_Vehiculo {
 
 	public static void main(String[] args) {
 		
@@ -23,6 +23,7 @@ public class Uso_Coche {
 		System.out.println(ObjCoche.retornaPesoCoche());
 		
 		System.out.println("El precio final del coche es " + ObjCoche.retornaPrecioCoche());
+		
 		
 		
 	}
