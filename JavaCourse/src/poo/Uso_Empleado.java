@@ -24,13 +24,27 @@ public class Uso_Empleado {
 		System.out.println("Nombre:  " + empleado3.getNombre() + " - Sueldo: " + empleado3.getSueldo() + " - Fecha de Alta: " + empleado3.getFechaAltaContrato());
 		*/
 		
-		Empleado[] misEmpleados = new Empleado[5];
+		Jefatura jefe_RRHH = new Jefatura("Juan", 55000, 1998, 8, 8); // Creando instancia de class Jefatura
+		
+		jefe_RRHH.setIncentivo(1500);
+		
+		
+		
+		Empleado[] misEmpleados = new Empleado[7];
 		
 		misEmpleados[0] = new Empleado("Rodolfo", 43500.55, 2007, 01, 14);
 		misEmpleados[1] = new Empleado("Pedro Mansilla", 35000, 1998, 12, 13);
 		misEmpleados[2] = new Empleado("María José", 72500.5, 2002, 03, 8);
 		misEmpleados[3] = new Empleado("Antonio Maciegas", 30000, 1987, 06, 27);
 		misEmpleados[4] = new Empleado("Priscila Dávila");
+		
+		misEmpleados[5]	= jefe_RRHH; // Ejemplo de Polimorfismo - Principio de sustitución
+		
+		misEmpleados[6] = new Jefatura("Carolina", 58754, 1999, 1, 12);
+		
+		Jefatura jefe_Financiero = (Jefatura)misEmpleados[6];
+		
+		jefe_Financiero.setIncentivo(1950);
 		
 		/*
 		for (int i = 0; i < misEmpleados.length; i++) {
@@ -72,6 +86,9 @@ class Empleado {
 	 	GregorianCalendar calendario = new GregorianCalendar(anio, mes-1, dia);
 		 
 	 	this.alta_contrato = calendario.getTime();
+	 	
+	 	Id = Id_Proximo;
+	 	Id_Proximo ++;
 		 
  	}
 	
@@ -85,7 +102,7 @@ class Empleado {
 	 
 	public String getNombre() {
 	 
-		return this.nombre;
+		return this.nombre + " ID  =  " + Id;
 	}
 	 
 	public double getSueldo() {
@@ -109,6 +126,8 @@ class Empleado {
  	private String nombre;
  	private double sueldo;
  	private Date alta_contrato;
+ 	private int Id;	
+	private static int Id_Proximo = 1;
 	 
 }
 
@@ -138,4 +157,14 @@ class Jefatura extends Empleado {
 	
 	
 	
+}
+
+class Director extends Jefatura {
+	
+	
+	public Director(String nombre, double sueldo, int anio, int mes, int dia) {
+		
+		super(nombre, sueldo, anio, mes, dia);
+		
+	}
 }
