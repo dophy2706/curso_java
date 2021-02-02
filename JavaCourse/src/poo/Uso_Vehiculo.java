@@ -1,11 +1,27 @@
 package poo;
 
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 
 public class Uso_Vehiculo {
 
 	public static void main(String[] args) {
 		
+		Coche micoche1 = new Coche();
+		
+		micoche1.setColor("Rojo");
+		
+		Furgoneta mifurgoneta = new Furgoneta(1200, 8);
+		
+		mifurgoneta.setColor("Blanco");
+		mifurgoneta.setClimatizador("si");
+		mifurgoneta.setAsientos("no");
+		
+		System.out.println(micoche1.getDatosGenerales());
+		System.out.println(mifurgoneta.returnarDatosFurgoneta());
+		System.out.println(mifurgoneta.getDatosGenerales());
+		
+		
+		/*
 		Coche ObjCoche = new Coche();  // INSTANCIAR UNA CLASE , EJEMPLARIZAR CLASE Coche
 		
 		ObjCoche.setColor(JOptionPane.showInputDialog("Especifica el color del coche, por favor"));
@@ -23,7 +39,7 @@ public class Uso_Vehiculo {
 		System.out.println(ObjCoche.retornaPesoCoche());
 		
 		System.out.println("El precio final del coche es " + ObjCoche.retornaPrecioCoche());
-		
+		*/
 		
 		
 	}

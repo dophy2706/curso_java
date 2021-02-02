@@ -111,3 +111,16 @@ class Empleado {
  	private Date alta_contrato;
 	 
 }
+
+class Jefatura extends Empleado {
+	
+	public Jefatura(String nombre, double sueldo, int anio, int mes, int dia) {
+		
+		super(nombre, sueldo, anio, mes, dia);
+		
+		//Video Nro 42 Herencia III
+		
+		
+	}
+	
+}
