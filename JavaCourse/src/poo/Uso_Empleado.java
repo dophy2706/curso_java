@@ -114,13 +114,28 @@ class Empleado {
 
 class Jefatura extends Empleado {
 	
+	private double incentivo;
+	
+	
 	public Jefatura(String nombre, double sueldo, int anio, int mes, int dia) {
 		
-		super(nombre, sueldo, anio, mes, dia);
-		
-		//Video Nro 42 Herencia III
-		
-		
+		super(nombre, sueldo, anio, mes, dia);	
+	
 	}
+
+
+	public double getSueldo() {
+		
+		double sueldoJefe = super.getSueldo();  //utilizando super nos llama a la class padre y al metodo definido
+		
+		return sueldoJefe + incentivo;
+	}
+
+
+	public void setIncentivo(double incentivo) {
+		this.incentivo = incentivo;
+	}
+	
+	
 	
 }
