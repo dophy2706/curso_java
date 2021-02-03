@@ -51,6 +51,20 @@ public class Uso_Empleado {
 			misEmpleados[i].subeSueldo(5);
 		}*/
 		
+		
+		Empleado director_comercial = new Jefatura("Guzmán", 85400, 2004, 12, 15);
+		
+		Comparable ejemplo = new Empleado("Elizabeth", 33890, 2001, 8, 24);
+		
+		if (director_comercial instanceof Empleado) {
+			System.out.println("Es de tipo Jefatura");
+		}
+		
+		if (ejemplo instanceof Comparable) {
+			System.out.println("Implementa interfaz comparable");
+		}
+		
+		
 		for (Empleado empleado : misEmpleados) {
 			  
 			empleado.subeSueldo(5.00);
@@ -64,6 +78,10 @@ public class Uso_Empleado {
 					+ " - Fecha de alta: " + misEmpleados[y].getFechaAltaContrato());
 		}*/
 		
+		
+		Arrays.sort(misEmpleados);
+		
+		
 		for (Empleado empleado : misEmpleados) {
 			
 			System.out.println("Nombre: " + empleado.getNombre() 
@@ -76,7 +94,7 @@ public class Uso_Empleado {
 }
 
 
-class Empleado {
+class Empleado implements Comparable {
 	
 	public Empleado(String nom, double sueld, int anio, int mes, int dia) {
 		 
@@ -96,6 +114,24 @@ class Empleado {
 		
 		this(nom, 30000, 1993, 10, 8); // implementación del this() pra encontrar un constructor que tenga 5 args y cargar datos
 		
+	}
+	
+	
+	
+	// Parametros para ordenar por sueldo
+	// Definicion de meetodo compareTo de la interface Comparable
+	public int compareTo(Object mi_Obj) {
+		
+		Empleado emp = (Empleado)mi_Obj;
+		if(this.sueldo < emp.sueldo) {
+			return -1;
+		}
+		
+		if(this.sueldo > emp.sueldo) {
+			return 1;
+		}
+		
+		return 0;
 	}
 	
 	
