@@ -28,7 +28,7 @@ public class Uso_Empleado {
 		
 		jefe_RRHH.setIncentivo(1500);
 		
-		
+			
 		
 		Empleado[] misEmpleados = new Empleado[7];
 		
@@ -43,6 +43,8 @@ public class Uso_Empleado {
 		misEmpleados[6] = new Jefatura("Carolina", 58754, 1999, 1, 12);
 		
 		Jefatura jefe_Financiero = (Jefatura)misEmpleados[6];
+		
+		System.out.println(jefe_Financiero.tomarDecisiones("Pagar Salarios"));
 		
 		jefe_Financiero.setIncentivo(1950);
 		
@@ -167,7 +169,7 @@ class Empleado implements Comparable {
 	 
 }
 
-class Jefatura extends Empleado {
+class Jefatura extends Empleado implements Jefes {
 	
 	private double incentivo;
 	
@@ -192,6 +194,9 @@ class Jefatura extends Empleado {
 	}
 	
 	
+	public String tomarDecisiones(String decision) {
+		return "Un Mienbro de la Dirección ha tomado la decisión de: " + decision;
+	}
 	
 }
 
