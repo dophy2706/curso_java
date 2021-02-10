@@ -1,6 +1,7 @@
 package poo;
 
 import java.util.*;
+import java.awt.Toolkit;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.Timer;
@@ -37,6 +38,8 @@ class Dame_La_Hora implements ActionListener {
 		Date ahora = new Date();
 		
 		System.out.println("Te muestro la hora cada 5 segs: " + ahora);
+		
+		Toolkit.getDefaultToolkit().beep();
 		
 	}
 	
