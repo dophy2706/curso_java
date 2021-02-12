@@ -1,6 +1,3 @@
-/**
- * 
- */
 package graficos;
 
 import java.awt.*;
