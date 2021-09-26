@@ -32,7 +32,6 @@ public class Uso_Arrays_II {
 			System.out.println(countries);
 		}
 		
-		
 	}
 
 }
